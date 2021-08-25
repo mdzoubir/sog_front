@@ -4,8 +4,6 @@ ul {
   padding: 0px;
 }
 
-
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* line 3, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
   .header-area {
@@ -239,7 +237,11 @@ li {
   z-index: 3;
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 }
-
+.header-area{
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 152, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
   .main-header .main-menu {
@@ -461,3 +463,130 @@ li {
 .mobile_menu .slicknav_menu .slicknav_nav .slicknav_item a {
   padding: 0 !important;
 }
+
+
+
+
+
+footer {
+  padding: 80px 0px 70px 0px;
+  border-top: 1px solid #ddd;
+}
+
+footer .footer-heading h4 {
+  font-size: 21px;
+  color: #232323;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+
+footer .about-veno .logo {
+  margin-bottom: 40px;
+}
+footer .about-veno .logo h4{
+  color: #09cc7f;
+}
+
+footer .about-veno ul li a {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  text-align: center;
+  line-height: 32px;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #fff;
+  margin-right: 3px;
+  transition: all 0.5s;
+}
+
+footer .about-veno p {
+  margin-bottom: 25px;
+}
+
+footer .about-veno ul li a:hover {
+  background-color: #09cc7f;
+}
+
+footer .useful-links ul li {
+  margin-bottom: 12px;
+}
+
+footer .useful-links ul li a {
+  font-size: 15px;
+  color: #7a7a7a;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+footer .useful-links ul li a:hover {
+  color: #09cc7f;
+}
+
+footer .useful-links ul li i {
+  color: #09cc7f;
+  font-size: 6px;
+  position: relative;
+  top: -3px;
+  margin-right: 8px;
+}
+
+footer .contact-info p {
+  margin-bottom: 25px;
+}
+
+footer .contact-info ul li {
+  margin: 10px 0px;
+}
+
+footer .contact-info ul li span {
+  font-size: 13px;
+  color: #7a7a7a;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  width: 80px;
+  display: inline-block;
+}
+
+footer .contact-info ul li a {
+  font-size: 13px;
+  color: #09cc7f;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.sub-footer p {
+  text-align: center;
+  display: inline-block;
+  background-color: #f4f4f4;
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 30px 0px;
+  font-size: 15px;
+  color: #aaaaaa;
+}
+
+.footer -menu li a:hover {
+  text-decoration: none;
+}
+
+.sub-footer a {
+  text-decoration: none;
+  color: #09cc7f;
+}
+
+@media (max-width:992px) {
+  footer .useful-links {
+    margin-top: 60px;
+  }
+
+  footer .contact-info {
+    margin-top: 60px;
+  }
+}
+
+

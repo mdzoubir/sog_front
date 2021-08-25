@@ -1,7 +1,7 @@
 #video-container {
   position: relative;
   width: 100%;
-  height: 560px;
+  height: 700px;
   overflow: hidden;
   z-index: 1;
 }
@@ -196,14 +196,6 @@ section.contact .section-heading {
   }
 }
 
-.service-area .section-tittle h2{
-  font-family: "Muli", sans-serif;
-  color: #072366;
-  margin-top: 0px;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: normal;
-}
 
 /* line 13, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_services_section.scss */
 .service-area .single-cat::before {
@@ -348,7 +340,7 @@ section.contact .section-heading {
 /* line 810, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
 .section-padding30 {
   padding-top: 195px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -432,6 +424,172 @@ section.contact .section-heading {
 }
 
 
+/* team */
+
+.team {
+	background-color: #f7f7f7;
+	/* margin-top: 140px; */
+	margin-bottom: -140px;
+	padding: 120px 0px;
+}
+
+.team-item img {
+	width: 100%;
+	overflow: hidden;
+}
+
+.team-item .down-content {
+	background-color: #fff;
+	padding: 30px;
+}
+
+.team-item .down-content h4 {
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.25px;
+	margin-bottom: 10px;
+}
+
+.team-item .down-content span {
+	color: #09cc7f;
+	font-weight: 600;
+	font-size: 14px;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.team-item .down-content p {
+	margin-bottom: 20px;
+}
+
+#map{
+  margin-top: 140px;
+}
+
+
+/* contact us */
+
+.callback-form .contact-form {
+	background-color: #09cc7f;
+	padding: 60px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.callback-form .contact-form input {
+	border-radius: 20px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0px 15px;
+	color: #6a6a6a;
+	font-size: 13px;
+	text-transform: none;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 35px;
+}
+
+.callback-form .contact-form input:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.callback-form .contact-form textarea {
+	border-radius: 20px;
+	height: 120px;
+	max-height: 200px;
+	min-height: 120px;
+	display: inline-block;
+	padding: 15px;
+	color: #6a6a6a;
+	font-size: 13px;
+	text-transform: none;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 35px;
+}
+
+.callback-form .contact-form textarea:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.callback-form .contact-form ::-webkit-input-placeholder { /* Edge */
+  color: #aaa;
+}
+.callback-form .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #aaa;
+}
+.callback-form .contact-form ::placeholder {
+  color: #aaa;
+}
+
+.callback-form .contact-form button.border-button {
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px 28px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+
+.callback-form .contact-form button.border-button:hover {
+	background-color: #fff;
+	color: #09cc7f;
+}
+
+
+.contact-us {
+	background-color: #f7f7f7;
+	padding: 140px 0px;
+}
+
+.contact-us .contact-form {
+	background-color: transparent!important;
+	padding: 0!important;
+}
+.contact-us .contact-form button.filled-button {
+	background-color: #09cc7f;
+	color: #fff;
+	border: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 12px 30px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+
+.contact-us .contact-form button.filled-button:hover {
+	background-color: #fff;
+	color: #09cc7f;
+}
+
+.service-area .section-tittle h2{
+  font-family: "Muli", sans-serif;
+  color: #072366;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: normal;
+}
+
 
 @media (max-width: 575px) {
   /* line 913, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
@@ -440,6 +598,7 @@ section.contact .section-heading {
     text-align: left !important;
   }
 }
+
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 913, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
@@ -499,92 +658,3 @@ section.contact .section-heading {
     font-size: 27px;
   }
 }
-
-
-/** testimonial section **/
-
-.testimonial {
-  background-color: #fff;
-}
-
-.testimonial_Carousel {
-  background: #4d4f12;
-  padding: 100px 45px;
-}
-
-.margin_boot {
-  padding-right: 0;
-}
-
-.testimonial_box .titlepage {
-  text-align: left;
-  padding-bottom: 30px;
-}
-
-.testimonial .titlepage h2 {
-  color: #313131;
-}
-
-.testimonial_box p {
-  color: #313131;
-  font-size: 17px;
-  line-height: 30px;
-}
-
-.testimonial_Carousel .carousel-caption {
-  position: inherit;
-  padding: 0;
-}
-
-.testimonial_box {
-  text-align: left;
-  padding: 0px 10px 0px 20px;
-}
-
-.test_box {
-  padding: 30px 25px;
-  background: #fff;
-}
-
-.testimonial_Carousel .test_box h4 {
-  font-size: 25px;
-  color: #555711;
-  line-height: 20px;
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  padding: 0;
-  padding-top: 8px;
-}
-
-.testimonial_Carousel .test_box p {
-  font-size: 17px;
-  line-height: 28px;
-  color: #222122;
-  text-align: center;
-  padding-top: 20px;
-}
-
-.testimonial_Carousel .carousel-indicators {
-  bottom: 50px;
-}
-
-.testimonial_Carousel .carousel-indicators li {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 10px;
-}
-
-.testimonial_Carousel .carousel-indicators li.active {
-  background: #f9c40b;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  display: none;
-}
-
-
-/** end testimonial section **/
-
