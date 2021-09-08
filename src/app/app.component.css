@@ -288,7 +288,7 @@ li {
   position: absolute;
   width: 170px;
   background: rgba(0, 12, 32, 0.6);
-  left: 0;
+  right: 0;
   top: 90%;
   visibility: hidden;
   opacity: 0;
@@ -301,34 +301,33 @@ li {
   transition: 0.3s;
 }
 
-/* line 191, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
 .main-header .main-menu ul ul.submenu > li {
   margin-left: 7px;
   display: block;
 }
 
-/* line 194, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
 .main-header .main-menu ul ul.submenu > li > a {
   padding: 6px 10px !important;
   font-size: 16px;
   color: #fdfdfd;
 }
 
-/* line 198, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
-.main-header .main-menu ul ul.submenu > li > a:hover {
+.main-header .main-menu ul ul.submenu > li > a:hover{
   color: #09cc7f;
   background: none;
   padding-left: 13px !important;
 }
 
-/* line 213, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
 .main-header ul > li:hover > ul.submenu {
   visibility: visible;
   opacity: 1;
   top: 100%;
 }
 
-/* line 245, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
+li a img{
+  width: 40px;
+}
+
 .btn {
   background: #09cc7f;
   font-family: "Muli", sans-serif;

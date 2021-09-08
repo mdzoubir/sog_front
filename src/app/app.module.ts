@@ -8,6 +8,10 @@ import { AboutComponent } from './component/about/about.component';
 import { StoriesComponent } from './component/stories/stories.component';
 import { BlogsComponent } from './component/blogs/blogs.component';
 import { DonateComponent } from './component/donate/donate.component';
+import { LoginComponent } from './component/login/login.component';
+
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,14 @@ import { DonateComponent } from './component/donate/donate.component';
     AboutComponent,
     StoriesComponent,
     BlogsComponent,
-    DonateComponent
+    DonateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

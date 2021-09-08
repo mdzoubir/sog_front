@@ -40,6 +40,13 @@
                           </ul>
                         </li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li *ngIf="!currentUser"><a href="login">Login</a></li>
+                        <li  *ngIf="currentUser"><a><img src="assets/img/profile/profil.png"></a>
+                          <ul class="submenu">
+                            <li><a href="/profil">Profil</a></li>
+                            <li><a (click)="logout()">Logout</a></li>
+                          </ul>
+                        </li>
                       </ul>
                     </nav>
                   </div>
