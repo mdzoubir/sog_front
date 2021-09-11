@@ -4,6 +4,7 @@ import {AuthService} from '../../services/auth.service';
 import {TokenService} from '../../services/token.service';
 import {Router} from '@angular/router';
 import {AccountService} from '../../services/account.service';
+import {ProfileService} from '../../services/profile.service';
 
 @Component({
   selector: 'app-login',
@@ -20,19 +21,20 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService,
               private tokenService: TokenService,
               private router: Router,
-              private accountService: AccountService) { }
+              private accountService: AccountService,
+              private profileService: ProfileService) { }
 
   ngOnInit(): void {
   }
 
   login() {
-    this.authService.login(this.loginForm.value).subscribe(res => this.handelResponse(res))
+    this.authService.login(this.loginForm.value).subscribe(res => this.handelResponse(res));
   }
 
   handelResponse(res : any){
     this.tokenService.handle(res);
     this.accountService.changeStatus(true);
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/user/profile");
   }
 
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ProfileService} from './profile.service';
 
 
 @Injectable({
@@ -7,9 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient){
-
-  }
+  constructor(private http: HttpClient, private profileService: ProfileService){}
 
   login(date : {email: string, password: string}){
     return this.http.post("http://localhost:8080/login", date);

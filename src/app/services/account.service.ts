@@ -7,13 +7,13 @@ import {TokenService} from './token.service';
 })
 export class AccountService {
 
-  private logeddIn = new BehaviorSubject<boolean>(this.tokenService.loggedIn());
+  private loggedIn = new BehaviorSubject<boolean>(this.tokenService.loggedIn());
 
-  authStatus = this.logeddIn.asObservable()
+  authStatus = this.loggedIn.asObservable()
 
   constructor(private tokenService: TokenService) { }
 
   changeStatus(value: boolean){
-    this.logeddIn.next(value)
+    this.loggedIn.next(value)
   }
 }

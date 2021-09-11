@@ -11,7 +11,9 @@ import { DonateComponent } from './component/donate/donate.component';
 import { LoginComponent } from './component/login/login.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { UserProfilComponent } from './component/user-profil/user-profil.component';
+import {JwtInterceptor} from './services/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     StoriesComponent,
     BlogsComponent,
     DonateComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfilComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,11 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

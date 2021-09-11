@@ -13,7 +13,7 @@ export class TokenService {
     localStorage.setItem('email', data.email);
   }
 
-  handle(data : any){
+  handle(data: any){
     this.set(data);
   }
 
@@ -26,18 +26,15 @@ export class TokenService {
   }
 
   remove(){
-    localStorage.removeItem('token');
-    localStorage.removeItem('email');
+    localStorage.clear();
   }
 
-  decode(payload : any){
-    console.log('payload : ', payload);
+  decode(payload: any){
     return JSON.parse(atob(payload));
   }
 
-  payload(token : any){
+  payload(token: any){
     const payload = token.split('.')[1];
-    console.log('payload : ', payload);
     return this.decode(payload);
   }
 
@@ -48,7 +45,7 @@ export class TokenService {
     if (token){
       const payload = this.payload(token);
       if (payload){
-        return email == payload.email;
+        return email == payload.sub;
       }
     }
     return false;
