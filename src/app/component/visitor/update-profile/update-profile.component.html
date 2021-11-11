@@ -8,9 +8,9 @@
             <div class="d-flex flex-column align-items-center text-center">
               <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
               <div class="mt-3">
-                <h4>{{visitor?.firstName+' '+visitor?.lastName}}</h4>
-                <p class="text-secondary mb-1">{{visitor?.role}}</p>
-                <p class="text-muted font-size-sm">{{visitor?.createdAtt}}</p>
+                <h4> </h4>
+                <p class="text-secondary mb-1"></p>
+                <p class="text-muted font-size-sm"></p>
               </div>
             </div>
           </div>
@@ -41,61 +41,56 @@
         </div>
       </div>
       <div class="col-md-8">
-        <div class="card mb-3">
+        <form #updateForm="ngForm" (ngSubmit)="updateVisitor(updateForm)" class="card">
           <div class="card-body">
-            <div class="row">
+            <div class="row mb-3">
               <div class="col-sm-3">
-                <h6 class="mb-0">First Name</h6>
+                <h6 class="mb-0">first Name</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{visitor?.firstName}}
+                <input ngModel name="firstName" type="text" class="form-control" value="{{visitor?.firstName}}">
               </div>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row mb-3">
               <div class="col-sm-3">
                 <h6 class="mb-0">Last Name</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{visitor?.lastName}}
+                <input ngModel name="lastName" type="text" class="form-control" value="{{visitor?.lastName}}">
               </div>
             </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Email</h6>
-              </div>
-              <div class="col-sm-9 text-secondary">
-                {{visitor?.email}}
-              </div>
-            </div>
-            <hr>
-            <div class="row">
+            <div class="row mb-3">
               <div class="col-sm-3">
                 <h6 class="mb-0">Phone</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{visitor?.userPhone}}
+                <input ngModel name="userPhoto" type="tel" class="form-control" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{visitor?.userPhone}}">
               </div>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row mb-3">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Photo</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <input  type="file" class="form-control">
+              </div>
+            </div>
+            <div class="row mb-3">
               <div class="col-sm-3">
                 <h6 class="mb-0">Address</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                {{visitor?.address}}
+                <input ngModel name="address" type="text" class="form-control" value="{{visitor?.address}}">
               </div>
             </div>
-            <hr>
             <div class="row">
-              <div class="col-sm-12">
-                <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+              <div class="col-sm-3"></div>
+              <div class="col-sm-9 text-secondary">
+                <button  type="submit" class="btn btn-primary px-4">Save Changes</button>
               </div>
             </div>
           </div>
-        </div>
-
+        </form>
 
         <table class="styled-table">
           <thead>
@@ -108,9 +103,9 @@
           </thead>
           <tbody>
           <tr *ngFor="let donation of donations">
-            <td>{{donation.girlName}}</td>
-            <td>{{donation.price}} DH</td>
-            <td>{{donation.target}} DH</td>
+            <td>{{donation?.girlName}}</td>
+            <td>{{donation.price}}DH</td>
+            <td>{{donation.target}}DH</td>
             <td>{{donation.ambassadorEmail}}</td>
           </tr>
           </tbody>

@@ -10,10 +10,13 @@ import { BlogsComponent } from './component/blogs/blogs.component';
 import { DonateComponent } from './component/donate/donate.component';
 import { LoginComponent } from './component/login/login.component';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import { UserProfilComponent } from './component/user-profil/user-profil.component';
+import { UserProfilComponent } from './component/visitor/user-profil/user-profil.component';
 import {JwtInterceptor} from './services/jwt.interceptor';
+import { UpdateProfileComponent } from './component/visitor/update-profile/update-profile.component';
+import { DetailsComponent } from './component/details/details.component';
+import {GirlService} from './services/girl.service';
 
 @NgModule({
   declarations: [
@@ -24,15 +27,20 @@ import {JwtInterceptor} from './services/jwt.interceptor';
     BlogsComponent,
     DonateComponent,
     LoginComponent,
-    UserProfilComponent
+    UserProfilComponent,
+    UpdateProfileComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [{
+  providers: [
+    GirlService,
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: JwtInterceptor,
     multi: true

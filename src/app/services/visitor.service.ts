@@ -22,4 +22,8 @@ export class VisitorService {
   getVisitor() : Observable<Visitor>{
     return this.http.get<Visitor>(`${environment.apiUrl}/api/v1/visitor/${this.profileService.getUserId()}`)
   }
+
+  updateVisitor(visitor: Visitor) :Observable<Visitor>{
+    return this.http.post<Visitor>(`${environment.apiUrl}/api/v1/visitor/${this.profileService.getUserId()}`, visitor);
+  }
 }

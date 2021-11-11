@@ -8,4 +8,6 @@ export interface Visitor {
   address: string;
   role: string;
   createdAtt: Date;
+  emailVerificationStatus: boolean;
+  photo: string;
 }

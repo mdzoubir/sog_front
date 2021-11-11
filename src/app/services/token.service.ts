@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {ProfileService} from './profile.service';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class TokenService {
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
   set(data: any){
     localStorage.setItem('token', data.token);
@@ -53,7 +54,6 @@ export class TokenService {
 
   getInfo(){
     const token = this.getToken();
-
     if(token){
       const payload = this.payload(token);
       return payload ? payload : null;
